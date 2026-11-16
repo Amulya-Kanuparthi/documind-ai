@@ -1,0 +1,14 @@
+
+Incident Response Policy
+
+Employees must report suspected cybersecurity incidents to the security team immediately.
+
+The security team must acknowledge critical incidents within 30 minutes.
+
+High-severity incidents must be escalated to the incident response manager within one hour.
+
+Confirmed data breaches must be documented in the incident management system.
+
+An initial incident investigation report must be prepared within 48 hours.
+
+All incident evidence must be preserved according to the company's evidence retention procedures.
