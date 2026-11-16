@@ -1,0 +1,1 @@
+"""DocuMind local retrieval package."""

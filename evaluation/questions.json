@@ -1,0 +1,39 @@
+
+[
+  {
+    "question": "When must terminated employee accounts be disabled?",
+    "relevant_sources": ["access_control.txt"]
+  },
+  {
+    "question": "How often are employee access rights reviewed?",
+    "relevant_sources": ["access_control.txt"]
+  },
+  {
+    "question": "Who approves privileged access?",
+    "relevant_sources": ["access_control.txt"]
+  },
+  {
+    "question": "How quickly must critical incidents be acknowledged?",
+    "relevant_sources": ["incident_response.txt"]
+  },
+  {
+    "question": "When must high-severity incidents be escalated?",
+    "relevant_sources": ["incident_response.txt"]
+  },
+  {
+    "question": "What is the deadline for an initial investigation report?",
+    "relevant_sources": ["incident_response.txt"]
+  },
+  {
+    "question": "When must vendors report suspected data breaches?",
+    "relevant_sources": ["vendor_policy.txt"]
+  },
+  {
+    "question": "How frequently must vendors complete security reviews?",
+    "relevant_sources": ["vendor_policy.txt"]
+  },
+  {
+    "question": "When must vendor access rights be reviewed?",
+    "relevant_sources": ["vendor_policy.txt"]
+  }
+]
