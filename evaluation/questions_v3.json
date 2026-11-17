@@ -1,0 +1,83 @@
+
+[
+  {
+    "question": "What should someone do if their login credentials have been exposed?",
+    "relevant_sources": ["password_policy.txt"]
+  },
+  {
+    "question": "How often is a copy of mission-critical database information saved?",
+    "relevant_sources": ["backup_policy.txt"]
+  },
+  {
+    "question": "For how many years should purchase and payment transaction history be kept?",
+    "relevant_sources": ["data_retention.txt"]
+  },
+  {
+    "question": "What secure connection is mandatory for staff working away from the office?",
+    "relevant_sources": ["remote_work.txt"]
+  },
+  {
+    "question": "Which cryptographic algorithm protects confidential information stored on disk?",
+    "relevant_sources": ["encryption_policy.txt"]
+  },
+  {
+    "question": "How often do suppliers with elevated security risk need to be evaluated?",
+    "relevant_sources": ["vendor_assessment.txt"]
+  },
+  {
+    "question": "Who should be alerted about the most serious incidents, and within what time?",
+    "relevant_sources": ["incident_escalation.txt"]
+  },
+  {
+    "question": "How frequently must staff refresh their cyber awareness knowledge?",
+    "relevant_sources": ["employee_training.txt"]
+  },
+  {
+    "question": "What is the maximum delay allowed before notifying the company about a missing work device?",
+    "relevant_sources": ["device_management.txt"]
+  },
+  {
+    "question": "What physical authentication mechanism is mandatory for administrators of cloud infrastructure?",
+    "relevant_sources": ["cloud_security.txt"]
+  },
+  {
+    "question": "For how many days must records of security events remain available?",
+    "relevant_sources": ["audit_logging.txt"]
+  },
+  {
+    "question": "What confidentiality designation applies to restricted business information?",
+    "relevant_sources": ["data_classification.txt"]
+  },
+  {
+    "question": "How many calls per minute may an outside application make to our APIs?",
+    "relevant_sources": ["api_security.txt"]
+  },
+  {
+    "question": "How many people must sign off before modifying a live production environment?",
+    "relevant_sources": ["change_management.txt"]
+  },
+  {
+    "question": "How frequently should the organization rehearse restoring operations after a disaster?",
+    "relevant_sources": ["business_continuity.txt"]
+  },
+  {
+    "question": "What identification must guests display when entering secure company premises?",
+    "relevant_sources": ["physical_security.txt"]
+  },
+  {
+    "question": "At what interval should network filtering rules undergo review?",
+    "relevant_sources": ["network_security.txt"]
+  },
+  {
+    "question": "How much time do new hires have to finish their mandatory compliance introduction?",
+    "relevant_sources": ["hr_onboarding.txt"]
+  },
+  {
+    "question": "Who authorizes a business expense above five thousand dollars?",
+    "relevant_sources": ["financial_controls.txt"]
+  },
+  {
+    "question": "How many competing price offers must be collected for a purchase above ten thousand dollars?",
+    "relevant_sources": ["procurement_policy.txt"]
+  }
+]

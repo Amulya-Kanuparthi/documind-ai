@@ -43,27 +43,44 @@ class BM25Retriever:
 
         return results
 
+
 def reciprocal_rank_fusion(
     semantic_results: list[dict],
     keyword_results: list[dict],
     k: int = 60,
     top_k: int = 3,
+    semantic_weight: float = 0.5,
+    keyword_weight: float = 0.5,
 ) -> list[dict]:
-    """Combine FAISS and BM25 rankings using RRF."""
+    """Combine semantic and keyword rankings using weighted RRF."""
     if k <= 0:
         raise ValueError("k must be positive")
 
     if top_k <= 0:
         return []
 
+    if (
+        semantic_weight < 0
+        or keyword_weight < 0
+        or semantic_weight + keyword_weight <= 0
+    ):
+        raise ValueError("Fusion weights must be nonnegative and not both zero")
+
     scores = {}
     documents = {}
 
-    for results in (semantic_results, keyword_results):
+    retrieval_lists = [
+        (semantic_results, semantic_weight),
+        (keyword_results, keyword_weight),
+    ]
+
+    for results, weight in retrieval_lists:
+        if weight == 0:
+            continue
+
         seen = set()
 
         for rank, document in enumerate(results, start=1):
-            # Use a stable chunk identifier when available.
             doc_id = str(document.get(
                 "id",
                 (
@@ -77,9 +94,12 @@ def reciprocal_rank_fusion(
                 continue
 
             seen.add(doc_id)
+
             scores[doc_id] = (
-                scores.get(doc_id, 0.0) + 1.0 / (k + rank)
+                scores.get(doc_id, 0.0)
+                + weight / (k + rank)
             )
+
             documents[doc_id] = document
 
     ranked_ids = sorted(
@@ -96,6 +116,7 @@ def reciprocal_rank_fusion(
         for doc_id in ranked_ids[:top_k]
     ]
 
+
 import json
 from pathlib import Path
 
@@ -105,6 +126,8 @@ def hybrid_search(
     question: str,
     top_k: int = 3,
     candidate_k: int = 20,
+    semantic_weight: float = 0.5,
+    keyword_weight: float = 0.5,
 ) -> list[dict]:
     """Combine FAISS and BM25 retrieval using RRF."""
     from documind.core import search as faiss_search
@@ -151,4 +174,6 @@ def hybrid_search(
         semantic_results,
         keyword_results,
         top_k=top_k,
+        semantic_weight=semantic_weight,
+        keyword_weight=keyword_weight,
     )

@@ -1,0 +1,3 @@
+API Security Policy
+
+External APIs must enforce a limit of 100 requests per minute.

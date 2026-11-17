@@ -1,0 +1,3 @@
+Business Continuity Policy
+
+Disaster recovery exercises must be conducted twice per year.

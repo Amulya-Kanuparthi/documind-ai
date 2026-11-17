@@ -1,0 +1,3 @@
+Vendor Assessment Policy
+
+High-risk vendors must undergo security assessments every 6 months.

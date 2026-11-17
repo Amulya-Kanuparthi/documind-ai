@@ -1,0 +1,316 @@
+[
+  {
+    "question_number": 1,
+    "question": "What should someone do if their login credentials have been exposed?",
+    "expected": [
+      "password_policy.txt"
+    ],
+    "correct_at_1": {
+      "FAISS": true,
+      "BM25": false,
+      "Hybrid": true
+    },
+    "rankings": {
+      "FAISS": [
+        "password_policy.txt",
+        "cloud_security.txt",
+        "audit_logging.txt"
+      ],
+      "BM25": [],
+      "Hybrid": [
+        "password_policy.txt",
+        "cloud_security.txt",
+        "audit_logging.txt"
+      ]
+    }
+  },
+  {
+    "question_number": 2,
+    "question": "How often is a copy of mission-critical database information saved?",
+    "expected": [
+      "backup_policy.txt"
+    ],
+    "correct_at_1": {
+      "FAISS": true,
+      "BM25": false,
+      "Hybrid": true
+    },
+    "rankings": {
+      "FAISS": [
+        "backup_policy.txt",
+        "data_retention.txt",
+        "audit_logging.txt"
+      ],
+      "BM25": [
+        "api_security.txt",
+        "backup_policy.txt",
+        "data_classification.txt"
+      ],
+      "Hybrid": [
+        "backup_policy.txt",
+        "api_security.txt",
+        "data_classification.txt"
+      ]
+    }
+  },
+  {
+    "question_number": 4,
+    "question": "What secure connection is mandatory for staff working away from the office?",
+    "expected": [
+      "remote_work.txt"
+    ],
+    "correct_at_1": {
+      "FAISS": true,
+      "BM25": false,
+      "Hybrid": true
+    },
+    "rankings": {
+      "FAISS": [
+        "remote_work.txt",
+        "physical_security.txt",
+        "employee_training.txt"
+      ],
+      "BM25": [
+        "change_management.txt",
+        "remote_work.txt",
+        "audit_logging.txt"
+      ],
+      "Hybrid": [
+        "remote_work.txt",
+        "audit_logging.txt",
+        "incident_escalation.txt"
+      ]
+    }
+  },
+  {
+    "question_number": 5,
+    "question": "Which cryptographic algorithm protects confidential information stored on disk?",
+    "expected": [
+      "encryption_policy.txt"
+    ],
+    "correct_at_1": {
+      "FAISS": true,
+      "BM25": false,
+      "Hybrid": true
+    },
+    "rankings": {
+      "FAISS": [
+        "encryption_policy.txt",
+        "data_classification.txt",
+        "physical_security.txt"
+      ],
+      "BM25": [
+        "data_classification.txt",
+        "encryption_policy.txt"
+      ],
+      "Hybrid": [
+        "encryption_policy.txt",
+        "data_classification.txt",
+        "physical_security.txt"
+      ]
+    }
+  },
+  {
+    "question_number": 6,
+    "question": "How often do suppliers with elevated security risk need to be evaluated?",
+    "expected": [
+      "vendor_assessment.txt"
+    ],
+    "correct_at_1": {
+      "FAISS": true,
+      "BM25": false,
+      "Hybrid": true
+    },
+    "rankings": {
+      "FAISS": [
+        "vendor_assessment.txt",
+        "network_security.txt",
+        "employee_training.txt"
+      ],
+      "BM25": [
+        "incident_escalation.txt",
+        "vendor_assessment.txt",
+        "network_security.txt"
+      ],
+      "Hybrid": [
+        "vendor_assessment.txt",
+        "incident_escalation.txt",
+        "network_security.txt"
+      ]
+    }
+  },
+  {
+    "question_number": 8,
+    "question": "How frequently must staff refresh their cyber awareness knowledge?",
+    "expected": [
+      "employee_training.txt"
+    ],
+    "correct_at_1": {
+      "FAISS": true,
+      "BM25": false,
+      "Hybrid": true
+    },
+    "rankings": {
+      "FAISS": [
+        "employee_training.txt",
+        "network_security.txt",
+        "vendor_assessment.txt"
+      ],
+      "BM25": [
+        "password_policy.txt",
+        "data_classification.txt",
+        "encryption_policy.txt"
+      ],
+      "Hybrid": [
+        "employee_training.txt",
+        "backup_policy.txt",
+        "password_policy.txt"
+      ]
+    }
+  },
+  {
+    "question_number": 9,
+    "question": "What is the maximum delay allowed before notifying the company about a missing work device?",
+    "expected": [
+      "device_management.txt"
+    ],
+    "correct_at_1": {
+      "FAISS": true,
+      "BM25": false,
+      "Hybrid": true
+    },
+    "rankings": {
+      "FAISS": [
+        "device_management.txt",
+        "network_security.txt",
+        "hr_onboarding.txt"
+      ],
+      "BM25": [
+        "remote_work.txt",
+        "incident_escalation.txt",
+        "device_management.txt"
+      ],
+      "Hybrid": [
+        "device_management.txt",
+        "incident_escalation.txt",
+        "remote_work.txt"
+      ]
+    }
+  },
+  {
+    "question_number": 11,
+    "question": "For how many days must records of security events remain available?",
+    "expected": [
+      "audit_logging.txt"
+    ],
+    "correct_at_1": {
+      "FAISS": true,
+      "BM25": false,
+      "Hybrid": true
+    },
+    "rankings": {
+      "FAISS": [
+        "audit_logging.txt",
+        "network_security.txt",
+        "data_retention.txt"
+      ],
+      "BM25": [
+        "data_retention.txt",
+        "audit_logging.txt",
+        "api_security.txt"
+      ],
+      "Hybrid": [
+        "audit_logging.txt",
+        "data_retention.txt",
+        "network_security.txt"
+      ]
+    }
+  },
+  {
+    "question_number": 14,
+    "question": "How many people must sign off before modifying a live production environment?",
+    "expected": [
+      "change_management.txt"
+    ],
+    "correct_at_1": {
+      "FAISS": false,
+      "BM25": false,
+      "Hybrid": true
+    },
+    "rankings": {
+      "FAISS": [
+        "vendor_assessment.txt",
+        "employee_training.txt",
+        "physical_security.txt"
+      ],
+      "BM25": [
+        "api_security.txt",
+        "change_management.txt",
+        "password_policy.txt"
+      ],
+      "Hybrid": [
+        "change_management.txt",
+        "password_policy.txt",
+        "api_security.txt"
+      ]
+    }
+  },
+  {
+    "question_number": 19,
+    "question": "Who authorizes a business expense above five thousand dollars?",
+    "expected": [
+      "financial_controls.txt"
+    ],
+    "correct_at_1": {
+      "FAISS": true,
+      "BM25": false,
+      "Hybrid": false
+    },
+    "rankings": {
+      "FAISS": [
+        "financial_controls.txt",
+        "procurement_policy.txt",
+        "vendor_assessment.txt"
+      ],
+      "BM25": [
+        "api_security.txt",
+        "business_continuity.txt",
+        "hr_onboarding.txt"
+      ],
+      "Hybrid": [
+        "business_continuity.txt",
+        "api_security.txt",
+        "hr_onboarding.txt"
+      ]
+    }
+  },
+  {
+    "question_number": 20,
+    "question": "How many competing price offers must be collected for a purchase above ten thousand dollars?",
+    "expected": [
+      "procurement_policy.txt"
+    ],
+    "correct_at_1": {
+      "FAISS": true,
+      "BM25": false,
+      "Hybrid": false
+    },
+    "rankings": {
+      "FAISS": [
+        "procurement_policy.txt",
+        "api_security.txt",
+        "financial_controls.txt"
+      ],
+      "BM25": [
+        "audit_logging.txt",
+        "data_retention.txt",
+        "api_security.txt"
+      ],
+      "Hybrid": [
+        "api_security.txt",
+        "data_retention.txt",
+        "business_continuity.txt"
+      ]
+    }
+  }
+]

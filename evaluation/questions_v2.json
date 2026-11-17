@@ -1,0 +1,122 @@
+[
+  {
+    "question": "When must compromised passwords be changed?",
+    "relevant_sources": [
+      "password_policy.txt"
+    ]
+  },
+  {
+    "question": "How frequently are critical database backups performed?",
+    "relevant_sources": [
+      "backup_policy.txt"
+    ]
+  },
+  {
+    "question": "How long must customer transaction records be retained?",
+    "relevant_sources": [
+      "data_retention.txt"
+    ]
+  },
+  {
+    "question": "What connection must remote employees use?",
+    "relevant_sources": [
+      "remote_work.txt"
+    ]
+  },
+  {
+    "question": "What encryption standard is required for sensitive stored data?",
+    "relevant_sources": [
+      "encryption_policy.txt"
+    ]
+  },
+  {
+    "question": "How often are high-risk vendors assessed?",
+    "relevant_sources": [
+      "vendor_assessment.txt"
+    ]
+  },
+  {
+    "question": "Who receives critical incident escalations and how quickly?",
+    "relevant_sources": [
+      "incident_escalation.txt"
+    ]
+  },
+  {
+    "question": "How frequently must employees complete cybersecurity training?",
+    "relevant_sources": [
+      "employee_training.txt"
+    ]
+  },
+  {
+    "question": "What is the reporting deadline for lost corporate devices?",
+    "relevant_sources": [
+      "device_management.txt"
+    ]
+  },
+  {
+    "question": "What authentication device is required for cloud administrators?",
+    "relevant_sources": [
+      "cloud_security.txt"
+    ]
+  },
+  {
+    "question": "How long must security audit logs be retained?",
+    "relevant_sources": [
+      "audit_logging.txt"
+    ]
+  },
+  {
+    "question": "What label must restricted information receive?",
+    "relevant_sources": [
+      "data_classification.txt"
+    ]
+  },
+  {
+    "question": "What rate limit applies to external APIs?",
+    "relevant_sources": [
+      "api_security.txt"
+    ]
+  },
+  {
+    "question": "How many reviewers must approve production changes?",
+    "relevant_sources": [
+      "change_management.txt"
+    ]
+  },
+  {
+    "question": "How often must disaster recovery exercises be conducted?",
+    "relevant_sources": [
+      "business_continuity.txt"
+    ]
+  },
+  {
+    "question": "What must visitors wear in restricted facilities?",
+    "relevant_sources": [
+      "physical_security.txt"
+    ]
+  },
+  {
+    "question": "How often must firewall rules be reviewed?",
+    "relevant_sources": [
+      "network_security.txt"
+    ]
+  },
+  {
+    "question": "What is the compliance orientation deadline for new employees?",
+    "relevant_sources": [
+      "hr_onboarding.txt"
+    ]
+  },
+  {
+    "question": "Who must approve expenses exceeding $5000?",
+    "relevant_sources": [
+      "financial_controls.txt"
+    ]
+  },
+  {
+    "question": "How many quotations are required for purchases exceeding $10000?",
+    "relevant_sources": [
+      "procurement_policy.txt"
+    ]
+  }
+]

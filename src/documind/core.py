@@ -1,4 +1,6 @@
+
 from __future__ import annotations
+from functools import lru_cache
 import json
 from dataclasses import asdict, dataclass
 from pathlib import Path
@@ -48,7 +50,7 @@ def build_index(data_dir: Path, index_dir: Path, model_name: str = MODEL) -> int
     chunks = make_chunks(load_documents(data_dir))
     if not chunks:
         raise ValueError(f"No extractable text found in {data_dir}")
-    model = SentenceTransformer(model_name, device="cpu")
+    model = get_embedding_model(model_name)
     vectors = model.encode([c.text for c in chunks], normalize_embeddings=True, convert_to_numpy=True)
     vectors = np.ascontiguousarray(vectors, dtype=np.float32)
     index = faiss.IndexFlatIP(vectors.shape[1])
@@ -67,7 +69,11 @@ def search(index_dir: Path, question: str, top_k: int = 3) -> list[dict]:
     config = json.loads((index_dir / "config.json").read_text(encoding="utf-8"))
     chunks = json.loads((index_dir / "chunks.json").read_text(encoding="utf-8"))
     index = faiss.read_index(str(index_dir / "vectors.faiss"))
-    model = SentenceTransformer(config["model"], device="cpu")
+    model = get_embedding_model(config["model"])
     vector = model.encode([question], normalize_embeddings=True, convert_to_numpy=True)
     scores, ids = index.search(np.ascontiguousarray(vector, dtype=np.float32), min(top_k, len(chunks)))
     return [{**chunks[int(idx)], "score": round(float(score), 4)} for score, idx in zip(scores[0], ids[0]) if idx >= 0]
+
+@lru_cache(maxsize=2)
+def get_embedding_model(model_name: str):
+    return SentenceTransformer(model_name, device="cpu")
